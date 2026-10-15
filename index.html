@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#071629">
+  <title>JARVIS — Assistant personnel</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">J</div>
+      <div>
+        <p class="eyebrow">ASSISTANT PERSONNEL</p>
+        <h1>JARVIS</h1>
+      </div>
+      <span class="status"><i></i> Interface locale</span>
+    </header>
+
+    <section class="welcome">
+      <div class="orb" aria-hidden="true"><span></span><span></span><span></span></div>
+      <p class="eyebrow">SYSTÈME EN INITIALISATION</p>
+      <h2>Bonjour.</h2>
+      <p class="subtext">Je suis prêt à évoluer avec toi.<br>Que souhaites-tu faire ?</p>
+    </section>
+
+    <section class="chat" aria-label="Conversation avec JARVIS" id="chat">
+      <div class="message jarvis">
+        <span class="speaker">JARVIS</span>
+        <p>Mon interface est prête. Mon cerveau en ligne et ma mémoire synchronisée seront configurés dans les prochaines étapes.</p>
+      </div>
+    </section>
+
+    <section class="quick-actions" aria-label="Commandes rapides">
+      <button data-prompt="Aide-moi à organiser ma journée">Organiser ma journée</button>
+      <button data-prompt="Quelles sont tes capacités actuelles ?">Mes capacités</button>
+      <button data-prompt="Je veux ajouter une nouvelle compétence">Ajouter une compétence</button>
+    </section>
+
+    <form class="composer" id="composer">
+      <button class="mic" id="mic" type="button" aria-label="Dictée vocale" title="Dictée vocale">🎙</button>
+      <input id="prompt" autocomplete="off" placeholder="Écris à JARVIS…" aria-label="Ton message">
+      <button class="send" type="submit" aria-label="Envoyer">➤</button>
+    </form>
+    <p class="notice" id="notice">Prototype : les messages ne sont pas encore envoyés à une IA et ne sont pas synchronisés en ligne.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
